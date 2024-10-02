@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    color: aqua;
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.main {
+    margin: 0;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    animation: changeColor 10s infinite;
+}
+
+.image-container img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.resume-container {
+    text-align: center;
+}
+
+.resume-image {
+    width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-image:hover {
+    transform: scale(1.5);
+    z-index: 1000;
+}
+
+.download-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #0056b3;
+}
+
+#skills {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+.skill h3 {
+    margin: 0;
+}
+
+#qualifications {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.qualification {
+    margin-bottom: 20px;
+}
+
+.qualification h3 {
+    color: #007BFF;
+}
+
+.qualification p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.contact-section {
+    background: #fff;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #666;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-info div {
+    text-align: center;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #ff9999;
+    }
+    25% {
+        background-color: #99ff99;
+    }
+    50% {
+        background-color: #9999ff;
+    }
+    75% {
+        background-color: #ffff99;
+    }
+    100% {
+        background-color: #ff9999;
+    }
+}
